@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Metadata</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Video Metadata</h1>
+        <table class="table table-bordered">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>File Path</td>
+                <td>{{ metadata.file_path }}</td>
+            </tr>
+            <tr>
+                <td>Created Time</td>
+                <td>{{ metadata.created_time }}</td>
+            </tr>
+            <tr>
+                <td>Modified Time</td>
+                <td>{{ metadata.modified_time }}</td>
+            </tr>
+            <tr>
+                <td>FPS</td>
+                <td>{{ metadata.fps }}</td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td>{{ metadata.duration }}</td>
+            </tr>
+            <tr>
+                <td>Number of Frames</td>
+                <td>{{ metadata.num_frames }}</td>
+            </tr>
+            <tr>
+                <td>Camera Model</td>
+                <td>{{ metadata.camera_model }}</td>
+            </tr>
+            <tr>
+                <td>Software</td>
+                <td>{{ metadata.software }}</td>
+            </tr>
+            <!-- Add more metadata fields as needed -->
+        </table>
+    </div>
+</body>
+</html>
